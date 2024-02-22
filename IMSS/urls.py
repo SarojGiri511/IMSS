@@ -19,11 +19,15 @@ from django.urls import path
 from .views import index
 from product import views
 
+
 urlpatterns = [
     path('', index,name='home'),
     path('product/', views.home, name='product'),
     path('category/', views.home, name='category'),
-
+    path('user/', views.home, name='user'),
+    path('permission/', views.home, name='permission'),
+    path('seles/', views.home, name='seles'),
+    
     
     path('admin/', admin.site.urls),
 ]
