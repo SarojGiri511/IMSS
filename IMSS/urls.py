@@ -1,5 +1,5 @@
 """
-URL configuration for IMSS project.
+URL configuration for IMS project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,18 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import index
-from product import views
-
+from .views import home
+from product.views import productHome, ProductDetail
+#from product import views
 
 urlpatterns = [
-    path('', index,name='home'),
-    path('product/', views.home, name='product'),
-    path('category/', views.home, name='category'),
-    path('user/', views.home, name='user'),
-    path('permission/', views.home, name='permission'),
-    path('seles/', views.home, name='seles'),
-    
-    
+    path('', home, name='home'),
+    path('products/', productHome, name='product'),
+    path('products/detail/', ProductDetail, name='productDetail'),
     path('admin/', admin.site.urls),
 ]

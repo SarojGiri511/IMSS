@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-+rnrwu_auu6w+s^x7znv$e%tiyzy%5uvmhatc74x5e7p^fukkt'
+SECRET_KEY = 'django-insecure-qj_brl_!2#^r*mxqy(o3%ame38l-or64zj(cqidijue^@i-k=6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,14 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'product',
-    'category',
+    'Category',
+    'Inventory',
     'customer',
-    'user',
-    'seles',
-    'permission',
-
-    
-    
+    'sales',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'IMSS.urls'
+ROOT_URLCONF = 'IMS.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'IMSS.wsgi.application'
+WSGI_APPLICATION = 'IMS.wsgi.application'
 
 
 # Database
@@ -114,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kathmandu'
 
 USE_I18N = True
 
