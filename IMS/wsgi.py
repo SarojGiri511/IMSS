@@ -1,5 +1,5 @@
 """
-WSGI config for IMSS project.
+WSGI config for IMS project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
