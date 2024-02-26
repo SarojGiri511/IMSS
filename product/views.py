@@ -8,7 +8,7 @@ def productHome(request):
         'title':'Products',
         'today':datetime.now().date(),
         'ch':'I',
-        'products':['Laptop','Mouse','Keyboard']
+        'products':['Laptop','Mouse','Keyboard','Monitor','Speaker']
         }
     
     return render(request,'index.html', context)
