@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import home
-from.views import register
-from product.views import productHome, ProductDetail
-from purchase.views import PurchaseDetail
-#from product import views
+from .views import register
+
+from product.views import productHome, productdetail
+from purchase.views import purchasedetail
+
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -28,10 +29,10 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', home, name='home'),
+    path('IMS/', register, name='register'),
     path('products/', productHome, name='product'),
-    path('products/detail/', ProductDetail, name='productDetail'),
-    path('purchases/home/', PurchaseDetail, name='purchaseDetail'),
-    path('ims/', register, name='register'),
+    path('products/detail/', productdetail, name='productdetail'),
+    path('purchases/home/', purchasedetail, name='purchasedetail'),
 
     path('admin/', admin.site.urls),
     
